@@ -1,0 +1,28 @@
+services:
+  frontend:
+    image: my-vue-app-payonners
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "9090:9090"
+    environment:
+      VITE_APP_API_BASE_URL: http://backend:4300
+    depends_on:
+      - backend
+
+  backend:
+    image: my-nestjs-backend-payonners
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "4300:4300"
+    environment:
+      NODE_ENV: production
+      JWT_SECRET: your_jwt_secret
+      JWT_EXPIRATION_TIME: 60m
+      DATABASE_URL: mysql://root:admin@38.180.145.113:3306/Payonners
+
+volumes:
+  db_data:

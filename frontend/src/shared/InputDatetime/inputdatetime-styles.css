@@ -1,0 +1,148 @@
+.datetime-input-container {
+  position: relative;
+  width: 100%;
+
+}
+
+.input-wrapper {
+  pointer-events: none;
+}
+
+.input-time {
+  margin-top: 10px;
+}
+
+.picker-container {
+  position: absolute;
+  top: 73px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.month-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.month-navigation span {
+  font-family: 'Gotham';
+  font-weight: bold;
+}
+
+.month-navigation span::first-letter {
+  text-transform: uppercase;
+}
+
+.weekday-headers,
+.day-picker {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.weekday-headers {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.day {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.day:not(.day.inactive):hover {
+  background: var(--yellow);
+  color: #fff;
+  border: 1px solid var(--yellow);
+}
+
+.day.inactive {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.day.active {
+  background-color: var(--orange);
+  color: white;
+  font-family: 'Gotham';
+  font-weight: bold;
+}
+
+.day.selected {
+  background: var(--yellow);
+  color: #fff;
+  border: 1px solid var(--yellow);
+}
+
+.time-picker {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.time-input {
+  display: flex;
+  align-items: center;
+}
+
+.time-input input {
+  width: 40px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.time-input button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.time-input button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.time-picker span {
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+.am-pm-toggle {
+  display: flex;
+  margin-left: 10px;
+}
+
+.am-pm-toggle button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #65cbfe;
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.am-pm-toggle button.active {
+  background-color: #1976d2;
+  color: #fff;
+  font-family: 'Gotham';
+  font-weight: bold;
+}

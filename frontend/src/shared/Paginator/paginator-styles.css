@@ -1,0 +1,30 @@
+.paginator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.paginator__pages {
+  display: flex;
+  gap: 4px;
+}
+
+.btn.active {
+  background-color: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+  font-family: 'Gotham';
+  font-weight: 600;
+}
+
+.btn {
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  background: var(--dark-blue);
+}
+
+.btn:not(.active):hover {
+  color: #fff
+}
