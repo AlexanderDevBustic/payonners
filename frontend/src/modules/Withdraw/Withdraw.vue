@@ -100,8 +100,8 @@
           }
 
           const selectedCurrency = selectedSourceAccount.value.value;
-          const destinationAccountCurrency =
-            selectedDestinationAccount.value.currency;
+          // const destinationAccountCurrency =
+          //   selectedDestinationAccount.value.currency;
 
           // if (selectedCurrency !== destinationAccountCurrency) {
           //   showToast('La cuenta debe usar la moneda que seleccionó.', 'error');
