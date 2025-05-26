@@ -1,0 +1,35 @@
+.header-dashboard {
+  height: 66px;
+  background: var(--dashboard-black);
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: space-between;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--blue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 25px;
+}
+
+.avatar img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo-mini {
+  width: 130px;
+  transition: width 0.3s ease;
+  margin-top: 0px;
+  filter: brightness(0) saturate(100%) invert(59%) sepia(98%) saturate(505%) hue-rotate(350deg) brightness(91%) contrast(96%);
+}

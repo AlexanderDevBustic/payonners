@@ -1,0 +1,153 @@
+/* Base Tooltip Styles */
+[tooltip] {
+  position: relative; /* Establishes a positioning context for pseudo-elements */
+  cursor: pointer;
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none;
+  font-size: 0.9em;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+[tooltip]::before {
+  content: '';
+  border: 5px solid transparent; /* Arrow styling */
+  z-index: 1001; /* Ensure the arrow is above the tooltip */
+}
+
+[tooltip]::after {
+  content: attr(tooltip); /* Dynamically set tooltip text */
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: 0.3ch;
+  box-shadow: 0 1em 2em -0.5em rgba(0, 0, 0, 0.35);
+  background: #333; /* Tooltip background color */
+  color: #fff; /* Tooltip text color */
+  z-index: 1000; /* Tooltip sits below the arrow */
+}
+
+/* Show tooltips on hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after {
+  display: block;
+}
+
+/* Hide empty tooltips */
+[tooltip='']::before,
+[tooltip='']::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[flow='up']::before {
+  bottom: 100%;
+  border-bottom-width: 0;
+  border-top-color: #333; /* Arrow color */
+}
+
+[flow='up']::after {
+  bottom: calc(100% + 5px); /* Position below the arrow */
+}
+
+[flow='up']::before,
+[flow='up']::after {
+  left: 50%;
+  transform: translate(-50%, -0.5em); /* Center horizontally */
+}
+
+/* FLOW: DOWN */
+[flow='down']::before {
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: #333; /* Arrow color */
+}
+
+[flow='down']::after {
+  top: calc(100% + 5px); /* Position below the arrow */
+}
+
+[flow='down']::before,
+[flow='down']::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em); /* Center horizontally */
+}
+
+/* FLOW: LEFT */
+[flow='left']::before {
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: #333; /* Arrow color */
+  left: calc(0em - 5px); /* Position to the left */
+  transform: translate(-0.5em, -50%); /* Center vertically */
+}
+
+[flow='left']::after {
+  top: 50%;
+  right: calc(100% + 5px); /* Position to the left */
+  transform: translate(-0.5em, -50%); /* Center vertically */
+}
+
+/* FLOW: RIGHT */
+[flow='right']::before {
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: #333; /* Arrow color */
+  right: calc(0em - 5px); /* Position to the right */
+  transform: translate(0.5em, -50%); /* Center vertically */
+}
+
+[flow='right']::after {
+  top: 50%;
+  left: calc(100% + 5px); /* Position to the right */
+  transform: translate(0.5em, -50%); /* Center vertically */
+}
+
+/* Animations */
+@keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* Apply animations to tooltips */
+[flow='up']:hover::before,
+[flow='up']:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[flow='down']:hover::before,
+[flow='down']:hover::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[flow='left']:hover::before,
+[flow='left']:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
+
+[flow='right']:hover::before,
+[flow='right']:hover::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}

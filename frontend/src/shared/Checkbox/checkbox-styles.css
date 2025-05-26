@@ -1,0 +1,44 @@
+.checkbox-flex {
+  display: flex;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  background-color: #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var(--yellow);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: var(--yellow);
+}
+
+.checkmark .material-icons {
+  color: #fff;
+  font-size: 18px;
+}

@@ -1,0 +1,130 @@
+.fc {
+  font-size: 14px;
+}
+
+:deep(.fc-toolbar .fc-button) {
+  background-color: var(--orange);
+  color: white;
+  border: none;
+  font-weight: bold;
+  outline: none;
+}
+
+:deep(.fc-toolbar .fc-button-active) {
+  background-color: var(--yellow) !important;
+  color: white;
+}
+
+:deep(.fc-toolbar .fc-button:hover) {
+  background-color: var(--yellow);
+  color: white;
+}
+
+:deep(.fc-toolbar-title) {
+  font-family: 'Gotham', sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--black);
+}
+
+:deep(.fc-event.in-progress) {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+:deep(.fc-event.in-progress:hover) {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+:deep(.fc-event.pending) {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+:deep(.fc-event.pending:hover) {
+  background-color: #1e7e34;
+  cursor: pointer;
+}
+
+:deep(.fc-event.expired) {
+  background-color: #ffc107;
+  color: black;
+  border: none;
+  font-weight: normal;
+}
+
+:deep(.fc-event.expired:hover) {
+  background-color: #e0a800;
+  cursor: pointer;
+}
+
+:deep(.fc-event.occupied) {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+:deep(.fc-event.occupied:hover) {
+  background-color: #c82333;
+  cursor: pointer;
+}
+
+:deep(.fc-event.completed) {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+:deep(.fc-event.completed:hover) {
+  background-color: #563d7c;
+  cursor: pointer;
+}
+
+:deep(.event-container) {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 5px;
+  width: 100%;
+}
+
+:deep(.event-container span) {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+:deep(.status-circle.occupied) {
+  background: purple!important
+}
+
+:deep(.fc-daygrid-day-frame.today) {
+  background-color: #f7f7f7;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+:deep(.fc-daygrid-day-frame.today:hover) {
+  background-color: #fff5b3;
+}
+
+@media (max-width: 1200px) {
+  .calendar-wrapper {
+    max-width: none; /* Allow the calendar to take up the full width */
+    padding-right: 10px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .fc {
+    font-size: 12px;
+  }
+}

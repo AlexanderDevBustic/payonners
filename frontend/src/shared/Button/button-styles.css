@@ -1,0 +1,54 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #fff;
+  background: var(--blue);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--dark-blue);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--icon {
+  gap: 8px;
+}
+
+.btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.material-icons {
+  font-size: 20px;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.btn--rounded {
+  border-radius: 9999px;
+}
+
+.btn--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn--fullWidth {
+  width: 100%;
+}

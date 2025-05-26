@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "02506d42-2eb1-4d37-a300-ffb0d4d0d391",
+		"name": "PRUEBA TECNICA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9660389"
+	},
+	"item": [
+		{
+			"name": "Get all accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get accounts by userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts/user/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts",
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get transactions by userId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts/transactions/user/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts",
+						"transactions",
+						"user",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts/balance/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts",
+						"balance",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Test\",\r\n  \"lastName\": \"Doe\",\r\n  \"identification\": \"0000\",\r\n  \"email\": \"roleexample@example.com\",\r\n  \"password\": \"123456789\",\r\n  \"country\": \"Colombia\",\r\n  \"state\": \"California\",\r\n  \"address\": \"123 Main St\",\r\n  \"phoneNumber\": \"555-1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"juanmanuelcuellarbahamon123@gmail.com\",\r\n  \"password\": \"Moncho123-\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/sign-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create account",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identificationNumber\": \"1075305650\",\r\n    \"accountHolder\": \"JUAN MANUEL CUELLAR BAHAMON\",\r\n    \"bankName\": \"BANCOLOMBIA\",\r\n    \"accountNumber\": \"283738478473847384\",\r\n    \"accountType\": \"Personal\",\r\n    \"country\": \"Colombia\",\r\n    \"currency\": \"COP\",\r\n    \"accountCategory\": \"Cuenta Ahorros\",\r\n    \"userId\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw funds by user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsImVtYWlsIjoianVhbm1hbnVlbGN1ZWxsYXJiYWhhbW9uMTIzQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImZ1bGxOYW1lIjoiSlVBTiBDVUVMTEFSIiwiaWF0IjoxNzQ2NDk2MDI0LCJleHAiOjE3NDY0OTk2MjR9.WAPqlFksA-UYwEYLZi4gkuZclNe2kPfqRKX8bMEbFtY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 1,\r\n  \"currency\": \"COP\",\r\n  \"accountId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts/withdraw/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts",
+						"withdraw",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add funds by user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsImVtYWlsIjoianVhbm1hbnVlbGN1ZWxsYXJiYWhhbW9uMTIzQGdtYWlsLmNvbSIsInJvbGUiOiJBRE1JTiIsImZ1bGxOYW1lIjoiSlVBTiBDVUVMTEFSIiwiaWF0IjoxNzQ2NTAwNjUyLCJleHAiOjE3NDY1MDQyNTJ9.8N3ablkG0FnHFKBiM50eV5OeZkbXkH0l9ZRcFJWpLiE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"amount\": 2300,\r\n  \"currency\": \"COP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bank-accounts/add-funds/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bank-accounts",
+						"add-funds",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

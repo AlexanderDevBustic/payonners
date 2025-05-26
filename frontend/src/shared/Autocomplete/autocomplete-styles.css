@@ -1,0 +1,65 @@
+.autocomplete {
+  position: relative;
+}
+.selected-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+.selected-item {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+}
+.remove-icon {
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+}
+.remove-icon:hover {
+  color: #ff4d4f;
+}
+.suggestions {
+  border: 1px solid #ccc;
+  border-top-width: 0;
+  list-style-type: none;
+  margin: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 1000;
+  background-color: #fff;
+}
+.suggestions li {
+  cursor: pointer;
+}
+.suggestions li.active,
+.suggestions li:hover {
+  background-color: var(--blue);
+  color: #fff
+}
+.no-results {
+  padding: 10px;
+  text-align: center;
+  color: #999;
+}
+.checkbox-container {
+  padding: 10px;
+  width: 100%;
+}
+
+.no-checkbox {
+  padding: 10px;
+}
+
+.checkbox-autocomplete {
+  padding: 10px;
+}

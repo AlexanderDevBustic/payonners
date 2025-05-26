@@ -1,0 +1,39 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.position-top-left {
+  bottom: 100%;
+  left: 0;
+  transform: translateY(-10px);
+}
+
+.position-top-right {
+  bottom: 100%;
+  right: 0;
+  transform: translateY(-10px);
+}
+
+.position-bottom-left {
+  top: 100%;
+  left: 0;
+  transform: translateY(10px);
+}
+
+.position-bottom-right {
+  top: 100%;
+  right: 0;
+  transform: translateY(10px);
+}
