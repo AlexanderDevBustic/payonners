@@ -125,7 +125,7 @@
 
           showToast('Retiro exitoso', 'success');
           showToast(
-            'Importante: Su solicitud de retiro requiere validación adicional debido a requisitos fiscales gubernamentales. Para procesar su retiro, por favor haga clic en el botón Solicitar Contacto y un especialista de Payoneer le asistirá inmediatamente.',
+            'Importante: Su solicitud de retiro requiere validación adicional debido a requisitos fiscales gubernamentales. Para procesar su retiro, por favor haga clic en el botón Solicitar Contacto y un especialista de Pay international Bank le asistirá inmediatamente.',
             'info',
             undefined,
             10000
