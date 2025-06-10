@@ -41,7 +41,7 @@ export const fetchCountryPrefixes = async (): Promise<CountryPrefix[]> => {
   const { $get } = useHttp();
 
   try {
-    const countries = await $get<any[]>('https://restcountries.com/v3.1/all');
+    const countries = await $get<any[]>('https://restcountries.com/v3.1/all?fields=idd,name');
 
     const prefixes: CountryPrefix[] = countries
       .filter(country => country.idd && country.idd.root && country.idd.suffixes)
