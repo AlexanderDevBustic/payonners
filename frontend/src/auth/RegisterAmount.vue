@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="footer-register">
-    <p>Millones de clientes en todo el mundo confían en Payoneer</p>
+    <p>Millones de clientes en todo el mundo confían en Pay international Bank</p>
     <p>Elegida por los marketplaces líderes</p>
   </div>
 </template>
